@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QTWidgetsTestingClass</class>
+ <widget class="QMainWindow" name="QTWidgetsTestingClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>868</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QTWidgetsTesting</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QViewport" name="viewport" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>640</width>
+      <height>640</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100,100,100)</string>
+    </property>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>530</y>
+       <width>411</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>391</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>Scene Settings</string>
+      </property>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>111</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Show Icosahedron</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="icosLevelLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> Icosahedron Level</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="icosLevel">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>40</y>
+         <width>42</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="suffix">
+        <string/>
+       </property>
+       <property name="maximum">
+        <number>4</number>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>20</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Show Teapot</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>40</y>
+         <width>111</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enable Cube Map</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="light0">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>20</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Light 0</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="light1">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>40</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Light 1</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>639</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QViewport</class>
+   <extends>QWidget</extends>
+   <header>QViewport.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="QTWidgetsTesting.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>icosLevel</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>icosLevel(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>89</x>
+     <y>747</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>light0</sender>
+   <signal>pressed()</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>onLight0()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>618</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>753</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>light1</sender>
+   <signal>pressed()</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>onLight1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>635</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>810</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>cubeMapCheckBox(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>626</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>730</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>icosRadio(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>602</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>698</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>QTWidgetsTestingClass</receiver>
+   <slot>teapotRadio(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>605</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>810</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>icosRadio(bool)</slot>
+  <slot>teapotRadio(bool)</slot>
+  <slot>icosLevel(int)</slot>
+  <slot>cubeMapCheckBox(bool)</slot>
+  <slot>onLight0()</slot>
+  <slot>onLight2()</slot>
+  <slot>onLight1()</slot>
+ </slots>
+</ui>
